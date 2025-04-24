@@ -15,8 +15,8 @@
         /* Header Styles */
         header {
             background-color: black;
-            color: white;
-            padding: 1rem;
+            color: #ffffff;
+            padding: 1%;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -27,7 +27,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -48,6 +48,7 @@
 
         nav ul li {
             margin-left: 1.5rem;
+            position: relative;
         }
 
         nav ul li a {
@@ -57,8 +58,21 @@
             transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: #ffd700;
+        nav ul li a::after {
+            content: ""; 
+            display: block; 
+            width: 100%; 
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            left: 0; 
+            bottom: -4px;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        
+        nav ul li a:hover::after {
+            transform: scaleX(1); 
         }
 
         .menu-toggle {
@@ -116,7 +130,6 @@
             margin-right: auto;
         }
 
-/* From Uiverse.io by Gaurav-WebDev */ 
 .button {
     height: 50px;
     width: 150px;
@@ -134,7 +147,7 @@
   }
   
   .type1::after {
-    content: "Thanks";
+    content: "Yare yare";
     height: 50px;
     width: 150px;
     background-color: black;
@@ -336,7 +349,7 @@
 
         /* Collections Banner */
         .collections-banner {
-            background-color: #6a5acd;
+            background-color: black;
             color: white;
             padding: 4rem 1rem;
             text-align: center;
@@ -360,7 +373,7 @@
 
         .collections-button {
             background-color: white;
-            color: #6a5acd;
+            color: black;
             border: none;
             padding: 0.75rem 1.5rem;
             font-size: 1rem;
